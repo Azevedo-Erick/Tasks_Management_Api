@@ -1,14 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TasksManagementApi.Models;
-
 namespace TasksManagementApi.Data.Mappings;
 
-public class UserMapping :  IEntityTypeConfiguration<User>
+public class TeamMapping : IEntityTypeConfiguration<Team>
 {
-    public void Configure(EntityTypeBuilder<User> builder)
+    public void Configure(EntityTypeBuilder<Team> builder)
     {
-        builder.ToTable("users");
+        builder.ToTable("teams");
 
 
         builder.Property(e => e.Id)
@@ -20,13 +19,12 @@ public class UserMapping :  IEntityTypeConfiguration<User>
             .HasMaxLength(255)
             .HasColumnName("name");
         
-        builder.Property(e => e.PasswordHash)
+        builder.Property(e => e.Description)
             .HasMaxLength(255)
-            .HasColumnName("password_hash");
-        
-        builder.Property(e => e.ProfilePictureFileName)
-            .HasMaxLength(255)
-            .HasColumnName("profile_picture_file_name");
-        builder.HasMany(x => x.Teams).WithMany(x => x.Users);
+            .HasColumnName("description");
+
+      
+
+
     }
 }

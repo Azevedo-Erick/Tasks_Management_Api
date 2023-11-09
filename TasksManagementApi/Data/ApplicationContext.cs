@@ -22,6 +22,8 @@ public class ApplicationContext : DbContext
     public virtual DbSet<User> Users { get; set; }
     public virtual DbSet<Task> Tasks { get; set; }
     public virtual DbSet<SubTask> SubTasks { get; set; }
+    public virtual DbSet<Team> Teams { get; set; }
+    public virtual DbSet<Tag> Tags { get; set; }
 
 
 }

@@ -6,5 +6,6 @@ public class User
     public string Name { get; set; }
     public string PasswordHash { get; set; }
     public string ProfilePictureFileName { get; set; }
-    public List<Team> Teams { get; set; }
+    public List<ProjectMember> Projects { get; set; }
+    public List<ActivityLog> Activities { get; set; }
 }

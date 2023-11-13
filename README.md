@@ -10,6 +10,10 @@ Esta é uma API em C# .NET 7 para gerenciamento de tarefas. Ela permite que os u
 - Um banco de dados SQL Server ou outro banco de dados compatível
 - Postman ou outra ferramenta similar para testar as chamadas da API
 
+## Documentação
+
+1. [Diagrama de Entidade Relacional](./Docs/ER_DIAGRAM.md)
+
 ## Rodando localmente
 
 1. Clone o repositório:

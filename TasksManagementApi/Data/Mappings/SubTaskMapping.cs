@@ -32,9 +32,9 @@ public class SubTaskMapping :  IEntityTypeConfiguration<SubTask>
             .HasMaxLength(255)
             .HasColumnName("dead_line");
         
-        builder.Property(e => e.Status)
+        builder.Property(e => e.Completed)
             .HasMaxLength(255)
-            .HasColumnName("status");
+            .HasColumnName("completed");
         
         
 

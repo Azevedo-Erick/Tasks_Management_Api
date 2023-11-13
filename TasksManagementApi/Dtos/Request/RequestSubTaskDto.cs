@@ -9,5 +9,4 @@ public class RequestSubTaskDto
     public DateTime StartDate { get; set; }
     public DateTime DeadLine { get; set; }
     public TaskPriority Priority { get; set; }
-    public StatusTask Status { get; set; }
 }

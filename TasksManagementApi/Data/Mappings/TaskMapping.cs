@@ -31,13 +31,15 @@ public class TaskMapping :  IEntityTypeConfiguration<Models.Task>
             .HasMaxLength(255)
             .HasColumnName("dead_line");
         
-        builder.Property(e => e.Status)
-            .HasMaxLength(255)
-            .HasColumnName("status");
 
+
+        builder.HasMany(x => x.Tags).WithMany(x => x.Tasks);
+        
         builder.HasMany(x => x.SubTasks)
             .WithOne(x => x.Task);
         
+        builder.HasOne(x => x.Status)
+            .WithMany(x => x.Tasks);
 
 
 

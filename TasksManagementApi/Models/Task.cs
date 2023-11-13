@@ -9,7 +9,12 @@ public class Task
     public DateTime DeadLine { get; set; }
     public List<SubTask> SubTasks { get; set; }
     public TaskPriority Priority { get; set; }
-    public StatusTask Status { get; set; }
+    public TaskStatus Status { get; set; }
+    public int StatusId { get; set; }
+
+    public List<ProjectMember> AssignedTo { get; set; }
+    public List<Tag> Tags { get; set; }
+    
 
     public Task()
     {

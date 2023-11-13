@@ -27,6 +27,6 @@ public class UserMapping :  IEntityTypeConfiguration<User>
         builder.Property(e => e.ProfilePictureFileName)
             .HasMaxLength(255)
             .HasColumnName("profile_picture_file_name");
-        builder.HasMany(x => x.Teams).WithMany(x => x.Users);
+        
     }
 }
